@@ -1,0 +1,23 @@
+[project]
+name = "mitzy-nodes"
+version = "0.1.0"
+description = "Custom Nodes for ComfyUI by Mitzy Sheen"
+readme = "README.md"
+authors = [
+    { name = "mitzy-sheen", email = "66828643+mitzy-sheen@users.noreply.github.com" }
+]
+requires-python = ">=3.10"
+dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.urls]
+Repository = "https://github.com/mitzy-sheen/mitzy-nodes"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "Mitzy-Nodes"
+Icon = ""
