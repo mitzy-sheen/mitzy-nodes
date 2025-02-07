@@ -4,7 +4,7 @@ class SplitPrompt:
     def INPUT_TYPES(cls):
         return {
             "required": {
-                "text": "STRING",
+                "Prompt": ("STRING", {}),
                 "max_lines": ("INT", {"default": 16, "min": 1, "max": 16, "step": 1}),
             }
         }
@@ -13,11 +13,11 @@ class SplitPrompt:
     # Define 15 output types (all as STRING)
     RETURN_TYPES = ("STRING",) * _max_lines
 
-    # Optionally, name each output for clarity in the UI
-    OUTPUT_NAMES = [f"Line {i+1}" for i in range(_max_lines)]
+    RETURN_NAMES = [f"Prompt {i+1}" for i in range(_max_lines)]
     
     CATEGORY = "MitzyNodes/Text"
     
+
     FUNCTION = "split_text"
 
     def split_text(self, text, max_lines):
