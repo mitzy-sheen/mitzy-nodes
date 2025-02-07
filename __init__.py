@@ -20,12 +20,12 @@ class SplitPrompt:
 
     FUNCTION = "split_text"
 
-    def split_text(self, text, max_lines):
+    def split_text(self, Prompt, max_lines):
         outputs = [""] * SplitPrompt._max_lines
         
         max_lines = min(max_lines, SplitPrompt._max_lines)
         
-        lines = text.split("\n", max_lines)
+        lines = Prompt.split("\n", max_lines)
 
         for i, line in enumerate(lines):
             outputs[i] = line
